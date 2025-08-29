@@ -6,7 +6,7 @@ export const getUser = async (req, res) => {
 
   if (reqId === id) {
     try {
-      const user = await User.findById(id).select("-password");
+      const user = await User.findById(id).select('-password -passwordResetToken -passwordResetExpires')
       if (!user) {
         return res.status(404).json({ message: "User not found" });
       }
@@ -23,20 +23,13 @@ export const getUser = async (req, res) => {
 };
 
 export const getAllUsers = async (req, res) => {
-  const { isAdmin } = req.user;
-
-  // Check if the user is an admin and the id matches
-  if (req.user.id === id && isAdmin) {
-    try {
-      const users = await User.find().select("-password");
-      res.status(200).json(users);
-    } catch (err) {
-      console.error(err.message);
-      res.status(500).json({ message: "Server error" });
-    }
-  } else {
-    return res
-      .status(403)
-      .json({ message: "You are not authorized to view all users" });
-  }
+   try {
+     const users = await User.find().select(
+       "-password -passwordResetToken -passwordResetExpires"
+     );
+     res.status(200).json(users);
+   } catch (err) {
+     console.error(err.message);
+     res.status(500).json({ message: "Server error" });
+   }
 };

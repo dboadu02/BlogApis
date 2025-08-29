@@ -9,6 +9,7 @@ import {
 } from "../controllers/userApis/barrel.js";
 import authMiddleware from "../middlewares/authMiddleware.js";
 import checkUlitimateAdmin from "../middlewares/checkUltimateAdmin.js";
+import checkAdmin from "../middlewares/checkAdminStatus.js";
 
 const userRouter = Router();
 
@@ -17,7 +18,7 @@ userRouter
   .post("/user/makeAdmin/:id", authMiddleware, checkUlitimateAdmin, makeAdmin) //make a user an admin
 
   .get("/user/:id", authMiddleware, getUser)
-  .get("/users/:id", authMiddleware, getAllUsers)
+  .get("/users", authMiddleware, checkAdmin, getAllUsers)
 
   .put("user/edit/:id", authMiddleware, updateUser)
 
