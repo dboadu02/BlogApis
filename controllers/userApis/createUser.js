@@ -46,6 +46,7 @@ export const createUser = async (req, res) => {
       password: hashedPassword,
       isAdmin: false,
       ultimateAdmin: false,
+      profilePic: req.file ? req.file.path : null,
     });
 
     await newUser.save();

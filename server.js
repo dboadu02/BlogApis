@@ -9,6 +9,7 @@ import postRouter from './routers/postRouter.js'
 import commentRouter from './routers/commentRouter.js'
 import cookieParser from 'cookie-parser'
 
+
 dotenv.config()
 connectDb()
 
@@ -24,6 +25,7 @@ app.use("/api", authRouter)
 app.use("/api", passwordResetRouter)
 app.use("/api", postRouter)
 app.use("/api", commentRouter)
+
 
 
 
