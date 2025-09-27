@@ -52,7 +52,7 @@ A RESTful API for a blogging platform built with Node.js, Express, and MongoDB.
 
 ## Usage
   - Access the API
-    - The API will be running at http://localhost:3000 or you can access at https://api-ecommerce-ydb6.onrender.com without cloning whole project.
+    - The API will be running at http://localhost:3000 or you can access at https://blogapi-jqur.onrender.com without cloning whole project.
     - Use tools like Postman or Swagger UI to test the endpoints.
 
 ---
