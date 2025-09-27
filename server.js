@@ -16,17 +16,18 @@ connectDb()
 const app = express()
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(express.json())
 app.use(cookieParser())
 
 app.use("/api", userRouter)
-app.use("/api/otp", otpRouter)
+app.use("/api", otpRouter)
 app.use("/api", authRouter)
 app.use("/api", passwordResetRouter)
 app.use("/api", postRouter)
 app.use("/api", commentRouter)
-
-
+app.get("/", (req, res) => {
+    res.send("WELCOME TO THE BLOG API")
+})
 
 
 const port = process.env.PORT

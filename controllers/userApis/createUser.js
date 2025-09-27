@@ -83,7 +83,7 @@ export const createUser = async (req, res) => {
 
     res
       .status(201)
-      .json({ message: "User registered successfully", user: newUser });
+      .json({ message: "User registered successfully, check your email for OTP", user: newUser });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
