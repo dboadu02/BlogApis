@@ -23,13 +23,13 @@ A RESTful API for a blogging platform built with Node.js, Express, and MongoDB.
 ### Installation
 
 1. Clone the repository:
-    ```bashsh
+    ```bash
     git clone <repo-url>
     cd BlogApis
     ```
 
 2. Install dependencies:
-    ```bashsh
+    ```bash
     npm install
     ```
 
@@ -49,6 +49,13 @@ A RESTful API for a blogging platform built with Node.js, Express, and MongoDB.
     ```bash
     npm run dev
     ```
+
+## Usage
+  - Access the API
+    - The API will be running at http://localhost:3000 or you can access at https://api-ecommerce-ydb6.onrender.com without cloning whole project.
+    - Use tools like Postman or Swagger UI to test the endpoints.
+
+---
 
 ## API Endpoints
 
