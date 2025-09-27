@@ -1,6 +1,6 @@
 import Router from 'express'
 import {createComment, editComment, getComments, deleteComment} from '../controllers/commentApis/barrel.js'
-import authMiddleware from '../middlewares/authMiddleware.js'
+import authMiddleware from '../middlewares/authmiddleware.js'
 
 const commentRouter = Router()
 

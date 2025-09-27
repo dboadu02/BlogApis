@@ -2,7 +2,7 @@ import Router from "express";
 import {createUser,makeAdmin,getUser,getAllUsers,updateUser,deleteUser} from "../controllers/userApis/barrel.js";
 import { isUser } from "../middlewares/isUser.js";
 import {updateImage,uploadImage,deleteImage} from "../controllers/userApis/imageController.js";
-import authMiddleware from "../middlewares/authMiddleware.js";
+import authMiddleware from "../middlewares/authmiddleware.js";
 import upload from "../middlewares/imageUpload.js";
 import checkUlitimateAdmin from "../middlewares/checkUltimateAdmin.js";
 import checkAdmin from "../middlewares/checkAdminStatus.js";

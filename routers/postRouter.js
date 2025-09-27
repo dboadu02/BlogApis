@@ -1,5 +1,5 @@
 import Router from 'express'
-import authMiddleware from '../middlewares/authMiddleware.js'
+import authMiddleware from '../middlewares/authmiddleware.js'
 import {createPost, getAllPosts, getPosts, editPost, deletePost} from '../controllers/postApi/barrel.js'
 
 const postRouter = Router()
